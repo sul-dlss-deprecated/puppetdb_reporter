@@ -22,18 +22,51 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return the number of hostnames' do
-    expect(@puppetdb_reporter.number_of_hostnames).to eql(464)
+    expect(@puppetdb_reporter.number_of_hostnames).to eql(463)
   end
 
-  #how many things have a technical_team
   it 'can return the number of nodes with a technical_team' do
     expect(@puppetdb_reporter.technical_team_count).to eql(114)
   end
 
-  it 'return a list of hostnames' do
+  it 'returns a list of hostnames' do
     expect(@puppetdb_reporter.hostnames).to be_kind_of(Array)
   end
 
-  #foreach hostname what is it's technical_team
+  it 'can return a department for a given hostname' do
+    expect(@puppetdb_reporter.get_department('sul-frda-prod.stanford.edu')).to eql('dlss')
+  end
+
+  it 'can return a technical_team for a given hostname' do
+    expect(@puppetdb_reporter.get_technical_team('sul-frda-prod.stanford.edu')).to eql('webteam')
+  end
+
+  it 'can return a user_advocate for a given hostname' do
+    expect(@puppetdb_reporter.get_user_advocate('sul-frda-prod.stanford.edu')).to eql('caster')
+  end
+
+  it 'can return a project for a given hostname' do
+    expect(@puppetdb_reporter.get_project('sul-frda-prod.stanford.edu')).to eql('frda')
+  end
+
+  it 'can return an sla_level for a given hostname' do
+    expect(@puppetdb_reporter.get_sla_level('sul-frda-prod.stanford.edu')).to eql('low')
+  end
+
+  it 'returns an array of facts for a hostname' do
+    expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
+                                                                                                'dlss','webteam','caster',
+                                                                                                'frda','low'])
+  end
+
+  it 'generates an array of facts for each hostname' do
+    skip
+    expect(@puppetdb_reporter.generate_all_content).to be_kind_of(Array)
+  end
+
+  it 'writes a csv report from generated content' do
+    skip
+    expect(@puppetdb_reporter.write_csv_report).to be_kind_of(Array)
+  end
 
 end
