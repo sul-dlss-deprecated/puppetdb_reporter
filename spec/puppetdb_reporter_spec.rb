@@ -22,7 +22,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return the number of hostnames' do
-    expect(@puppetdb_reporter.number_of_hostnames).to eql(463)
+    expect(@puppetdb_reporter.number_of_hostnames).to eql(464)
   end
 
   it 'can return the number of nodes with a technical_team' do

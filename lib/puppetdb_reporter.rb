@@ -1,5 +1,4 @@
 require 'puppetdb'
-require 'json'
 require 'csv'
 
 class PuppetdbReporter
@@ -38,37 +37,29 @@ class PuppetdbReporter
   # {"value" : "webteam", "name" : "technical_team", "certname" : "sul-frda-prod.stanford.edu"}
 
   def get_department(hostname)
-    response = client.request('facts', ['and',
-                                         ['=', 'certname', hostname],
-                                         ['=', 'name', 'department']])
-    response.data.collect { |x| x['value'] }.first
+    get_fact_value(hostname, 'department')
   end
 
   def get_technical_team(hostname)
-    response = client.request('facts', ['and',
-                                         ['=', 'certname', hostname],
-                                         ['=', 'name', 'technical_team']])
-    response.data.collect { |x| x['value'] }.first
+    get_fact_value(hostname, 'technical_team')
   end
 
   def get_user_advocate(hostname)
-    response = client.request('facts', ['and',
-                                         ['=', 'certname', hostname],
-                                         ['=', 'name', 'user_advocate']])
-    response.data.collect { |x| x['value'] }.first
+    get_fact_value(hostname, 'user_advocate')
   end
 
   def get_project(hostname)
-    response = client.request('facts', ['and',
-                                         ['=', 'certname', hostname],
-                                         ['=', 'name', 'project']])
-    response.data.collect { |x| x['value'] }.first
+    get_fact_value(hostname, 'project')
   end
 
   def get_sla_level(hostname)
+    get_fact_value(hostname, 'sla_level')
+  end
+
+  def get_fact_value(hostname, fact_name)
     response = client.request('facts', ['and',
                                          ['=', 'certname', hostname],
-                                         ['=', 'name', 'sla_level']])
+                                         ['=', 'name', fact_name]])
     response.data.collect { |x| x['value'] }.first
   end
 
