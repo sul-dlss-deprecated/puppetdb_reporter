@@ -1,7 +1,5 @@
 require 'puppetdb'
-require 'json'
 require 'csv'
-require 'benchmark'
 
 class PuppetdbReporter
 
@@ -78,11 +76,7 @@ class PuppetdbReporter
 
   def generate_all_content
     all_content = []
-    Benchmark.bm do |b|
-            b.report {
-      hostnames.collect { |x| all_content << generate_line_of_content(x) }
-      }
-    end
+    hostnames.collect { |x| all_content << generate_line_of_content(x) }
     all_content
   end
 
