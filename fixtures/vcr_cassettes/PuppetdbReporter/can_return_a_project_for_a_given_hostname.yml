@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22sul-frda-prod.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22project%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 30 Mar 2016 03:08:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '92'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "frda",
+          "name" : "project",
+          "certname" : "sul-frda-prod.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Wed, 30 Mar 2016 03:08:50 GMT
+recorded_with: VCR 3.0.1

@@ -1,0 +1,1901 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22=%22,%22name%22,%22hostname%22%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 30 Mar 2016 03:04:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '4211'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "sw-solr-m",
+          "name" : "hostname",
+          "certname" : "sw-solr-m.stanford.edu"
+        }, {
+          "value" : "kurma-robots1-prod",
+          "name" : "hostname",
+          "certname" : "kurma-robots1-prod.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-prod-a",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-prod-a.stanford.edu"
+        }, {
+          "value" : "sul-sedora-test",
+          "name" : "hostname",
+          "certname" : "sul-sedora-test.stanford.edu"
+        }, {
+          "value" : "kurma-monitor-dev",
+          "name" : "hostname",
+          "certname" : "kurma-monitor-dev.stanford.edu"
+        }, {
+          "value" : "libdbprod3",
+          "name" : "hostname",
+          "certname" : "libdbprod3.stanford.edu"
+        }, {
+          "value" : "dlss-dev-bess",
+          "name" : "hostname",
+          "certname" : "dlss-dev-bess.stanford.edu"
+        }, {
+          "value" : "salt-app-dev2",
+          "name" : "hostname",
+          "certname" : "salt-app-dev2.stanford.edu"
+        }, {
+          "value" : "dlss-dev-pjreed",
+          "name" : "hostname",
+          "certname" : "dlss-dev-pjreed.stanford.edu"
+        }, {
+          "value" : "sul-ossec",
+          "name" : "hostname",
+          "certname" : "sul-ossec.stanford.edu"
+        }, {
+          "value" : "orbis-dev",
+          "name" : "hostname",
+          "certname" : "orbis-dev.stanford.edu"
+        }, {
+          "value" : "sulstats-prod",
+          "name" : "hostname",
+          "certname" : "sulstats-prod.stanford.edu"
+        }, {
+          "value" : "cw-help-test",
+          "name" : "hostname",
+          "certname" : "cw-help-test.stanford.edu"
+        }, {
+          "value" : "sul-vha",
+          "name" : "hostname",
+          "certname" : "sul-vha.stanford.edu"
+        }, {
+          "value" : "dig-dev",
+          "name" : "hostname",
+          "certname" : "dig-dev.stanford.edu"
+        }, {
+          "value" : "libdbdev4",
+          "name" : "hostname",
+          "certname" : "libdbdev4.stanford.edu"
+        }, {
+          "value" : "dlss-dev-suntzu",
+          "name" : "hostname",
+          "certname" : "dlss-dev-suntzu.stanford.edu"
+        }, {
+          "value" : "bv-stage",
+          "name" : "hostname",
+          "certname" : "bv-stage.stanford.edu"
+        }, {
+          "value" : "wayback-dev",
+          "name" : "hostname",
+          "certname" : "wayback-dev.stanford.edu"
+        }, {
+          "value" : "virgon",
+          "name" : "hostname",
+          "certname" : "virgon.stanford.edu"
+        }, {
+          "value" : "dlss-dev-wmene",
+          "name" : "hostname",
+          "certname" : "dlss-dev-wmene.stanford.edu"
+        }, {
+          "value" : "dpglab-db-csn",
+          "name" : "hostname",
+          "certname" : "dpglab-db-csn.stanford.edu"
+        }, {
+          "value" : "wayback-test",
+          "name" : "hostname",
+          "certname" : "wayback-test.stanford.edu"
+        }, {
+          "value" : "webcurator",
+          "name" : "hostname",
+          "certname" : "webcurator.stanford.edu"
+        }, {
+          "value" : "sulbars10",
+          "name" : "hostname",
+          "certname" : "sulbars10.stanford.edu"
+        }, {
+          "value" : "sul-reader-prod",
+          "name" : "hostname",
+          "certname" : "sul-reader-prod.stanford.edu"
+        }, {
+          "value" : "dorfetcher-stage",
+          "name" : "hostname",
+          "certname" : "dorfetcher-stage.stanford.edu"
+        }, {
+          "value" : "dlss-dev-blalbrit",
+          "name" : "hostname",
+          "certname" : "dlss-dev-blalbrit.stanford.edu"
+        }, {
+          "value" : "dorfetcher-dev",
+          "name" : "hostname",
+          "certname" : "dorfetcher-dev.stanford.edu"
+        }, {
+          "value" : "sw-webapp-e",
+          "name" : "hostname",
+          "certname" : "sw-webapp-e.stanford.edu"
+        }, {
+          "value" : "harvestdor-stage",
+          "name" : "hostname",
+          "certname" : "harvestdor-stage.stanford.edu"
+        }, {
+          "value" : "rwj-a",
+          "name" : "hostname",
+          "certname" : "rwj-a.stanford.edu"
+        }, {
+          "value" : "libdbdev3",
+          "name" : "hostname",
+          "certname" : "libdbdev3.stanford.edu"
+        }, {
+          "value" : "cw5app22",
+          "name" : "hostname",
+          "certname" : "cw5app22.stanford.edu"
+        }, {
+          "value" : "revs-stage",
+          "name" : "hostname",
+          "certname" : "revs-stage.stanford.edu"
+        }, {
+          "value" : "sul-ld4l-demo",
+          "name" : "hostname",
+          "certname" : "sul-ld4l-demo.stanford.edu"
+        }, {
+          "value" : "sul-slack-prod",
+          "name" : "hostname",
+          "certname" : "sul-slack-prod.stanford.edu"
+        }, {
+          "value" : "argo-prod-a",
+          "name" : "hostname",
+          "certname" : "argo-prod-a.stanford.edu"
+        }, {
+          "value" : "gatt-prod",
+          "name" : "hostname",
+          "certname" : "gatt-prod.stanford.edu"
+        }, {
+          "value" : "rsmith11-w2012",
+          "name" : "hostname",
+          "certname" : "rsmith11-w2012.stanford.edu"
+        }, {
+          "value" : "sulcap-dev-solo",
+          "name" : "hostname",
+          "certname" : "sulcap-dev-solo.stanford.edu"
+        }, {
+          "value" : "sw-webapp-a",
+          "name" : "hostname",
+          "certname" : "sw-webapp-a.stanford.edu"
+        }, {
+          "value" : "sul-vcli-1",
+          "name" : "hostname",
+          "certname" : "sul-vcli-1.stanford.edu"
+        }, {
+          "value" : "dlss-dev-cabeer",
+          "name" : "hostname",
+          "certname" : "dlss-dev-cabeer.stanford.edu"
+        }, {
+          "value" : "coursework-qa9",
+          "name" : "hostname",
+          "certname" : "coursework-qa9.stanford.edu"
+        }, {
+          "value" : "sul-mirador-prod",
+          "name" : "hostname",
+          "certname" : "sul-mirador-prod.stanford.edu"
+        }, {
+          "value" : "suldbdev2",
+          "name" : "hostname",
+          "certname" : "suldbdev2.stanford.edu"
+        }, {
+          "value" : "coursework-qa4",
+          "name" : "hostname",
+          "certname" : "coursework-qa4.stanford.edu"
+        }, {
+          "value" : "heaven-stage",
+          "name" : "hostname",
+          "certname" : "heaven-stage.stanford.edu"
+        }, {
+          "value" : "revs-dev",
+          "name" : "hostname",
+          "certname" : "revs-dev.stanford.edu"
+        }, {
+          "value" : "sul-reader-test",
+          "name" : "hostname",
+          "certname" : "sul-reader-test.stanford.edu"
+        }, {
+          "value" : "libdbdev2",
+          "name" : "hostname",
+          "certname" : "libdbdev2.stanford.edu"
+        }, {
+          "value" : "libappprod1",
+          "name" : "hostname",
+          "certname" : "libappprod1.stanford.edu"
+        }, {
+          "value" : "sulcap-qa",
+          "name" : "hostname",
+          "certname" : "sulcap-qa.stanford.edu"
+        }, {
+          "value" : "dpn-dev",
+          "name" : "hostname",
+          "certname" : "dpn-dev.stanford.edu"
+        }, {
+          "value" : "sw-webapp-test-c",
+          "name" : "hostname",
+          "certname" : "sw-webapp-test-c.stanford.edu"
+        }, {
+          "value" : "dlss-dev-azanella",
+          "name" : "hostname",
+          "certname" : "dlss-dev-azanella.stanford.edu"
+        }, {
+          "value" : "sul-cms-cache-stage-a",
+          "name" : "hostname",
+          "certname" : "sul-cms-cache-stage-a.stanford.edu"
+        }, {
+          "value" : "suldbdev4",
+          "name" : "hostname",
+          "certname" : "suldbdev4.stanford.edu"
+        }, {
+          "value" : "newcaprica",
+          "name" : "hostname",
+          "certname" : "newcaprica.stanford.edu"
+        }, {
+          "value" : "dlss-dev-carrickr",
+          "name" : "hostname",
+          "certname" : "dlss-dev-carrickr.stanford.edu"
+        }, {
+          "value" : "kurma-monitor-test",
+          "name" : "hostname",
+          "certname" : "kurma-monitor-test.stanford.edu"
+        }, {
+          "value" : "embed-dev",
+          "name" : "hostname",
+          "certname" : "embed-dev.stanford.edu"
+        }, {
+          "value" : "jirasul",
+          "name" : "hostname",
+          "certname" : "jirasul.stanford.edu"
+        }, {
+          "value" : "sul-dms-dev",
+          "name" : "hostname",
+          "certname" : "sul-dms-dev.stanford.edu"
+        }, {
+          "value" : "sul-eems-stage",
+          "name" : "hostname",
+          "certname" : "sul-eems-stage.stanford.edu"
+        }, {
+          "value" : "sul-etd-prod",
+          "name" : "hostname",
+          "certname" : "sul-etd-prod.stanford.edu"
+        }, {
+          "value" : "cw-jenkins1",
+          "name" : "hostname",
+          "certname" : "cw-jenkins1.stanford.edu"
+        }, {
+          "value" : "suldbdev3",
+          "name" : "hostname",
+          "certname" : "suldbdev3.stanford.edu"
+        }, {
+          "value" : "coursework-qa6",
+          "name" : "hostname",
+          "certname" : "coursework-qa6.stanford.edu"
+        }, {
+          "value" : "dpn-dev-node-a",
+          "name" : "hostname",
+          "certname" : "dpn-dev-node-a.stanford.edu"
+        }, {
+          "value" : "kurma-db2-prod",
+          "name" : "hostname",
+          "certname" : "kurma-db2-prod.stanford.edu"
+        }, {
+          "value" : "dpn-demo",
+          "name" : "hostname",
+          "certname" : "dpn-demo.stanford.edu"
+        }, {
+          "value" : "walt-museum",
+          "name" : "hostname",
+          "certname" : "walt-museum.stanford.edu"
+        }, {
+          "value" : "sul-dms-test",
+          "name" : "hostname",
+          "certname" : "sul-dms-test.stanford.edu"
+        }, {
+          "value" : "sulcap-dev",
+          "name" : "hostname",
+          "certname" : "sulcap-dev.stanford.edu"
+        }, {
+          "value" : "sulwebapp2",
+          "name" : "hostname",
+          "certname" : "sulwebapp2.stanford.edu"
+        }, {
+          "value" : "bv-dev",
+          "name" : "hostname",
+          "certname" : "bv-dev.stanford.edu"
+        }, {
+          "value" : "wayback-prod",
+          "name" : "hostname",
+          "certname" : "wayback-prod.stanford.edu"
+        }, {
+          "value" : "sul-glanding",
+          "name" : "hostname",
+          "certname" : "sul-glanding.stanford.edu"
+        }, {
+          "value" : "embed-prod",
+          "name" : "hostname",
+          "certname" : "embed-prod.stanford.edu"
+        }, {
+          "value" : "kurma-db1-prod",
+          "name" : "hostname",
+          "certname" : "kurma-db1-prod.stanford.edu"
+        }, {
+          "value" : "sul-solr-test-b",
+          "name" : "hostname",
+          "certname" : "sul-solr-test-b.stanford.edu"
+        }, {
+          "value" : "sulmuse-dev",
+          "name" : "hostname",
+          "certname" : "sulmuse-dev.stanford.edu"
+        }, {
+          "value" : "kurma-earthworks1-prod",
+          "name" : "hostname",
+          "certname" : "kurma-earthworks1-prod.stanford.edu"
+        }, {
+          "value" : "sulpuppet-stage",
+          "name" : "hostname",
+          "certname" : "sulpuppet-stage.stanford.edu"
+        }, {
+          "value" : "sulreports-dev",
+          "name" : "hostname",
+          "certname" : "sulreports-dev.stanford.edu"
+        }, {
+          "value" : "sfm-dev",
+          "name" : "hostname",
+          "certname" : "sfm-dev.stanford.edu"
+        }, {
+          "value" : "hydrus-test",
+          "name" : "hostname",
+          "certname" : "hydrus-test.stanford.edu"
+        }, {
+          "value" : "libappdev2",
+          "name" : "hostname",
+          "certname" : "libappdev2.stanford.edu"
+        }, {
+          "value" : "consul-test",
+          "name" : "hostname",
+          "certname" : "consul-test.stanford.edu"
+        }, {
+          "value" : "libappdev3",
+          "name" : "hostname",
+          "certname" : "libappdev3.stanford.edu"
+        }, {
+          "value" : "dlss-dev-efahy",
+          "name" : "hostname",
+          "certname" : "dlss-dev-efahy.stanford.edu"
+        }, {
+          "value" : "sul-fedora-dev-a",
+          "name" : "hostname",
+          "certname" : "sul-fedora-dev-a.stanford.edu"
+        }, {
+          "value" : "cw5app23",
+          "name" : "hostname",
+          "certname" : "cw5app23.stanford.edu"
+        }, {
+          "value" : "sul-solr-a",
+          "name" : "hostname",
+          "certname" : "sul-solr-a.stanford.edu"
+        }, {
+          "value" : "dorfetcher-prod",
+          "name" : "hostname",
+          "certname" : "dorfetcher-prod.stanford.edu"
+        }, {
+          "value" : "cw5app19",
+          "name" : "hostname",
+          "certname" : "cw5app19.stanford.edu"
+        }, {
+          "value" : "sul-dms-prod",
+          "name" : "hostname",
+          "certname" : "sul-dms-prod.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-prod-b",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-prod-b.stanford.edu"
+        }, {
+          "value" : "dlss-dev-awinget",
+          "name" : "hostname",
+          "certname" : "dlss-dev-awinget.stanford.edu"
+        }, {
+          "value" : "dlss-dev-kamchan",
+          "name" : "hostname",
+          "certname" : "dlss-dev-kamchan.stanford.edu"
+        }, {
+          "value" : "cw5app14",
+          "name" : "hostname",
+          "certname" : "cw5app14.stanford.edu"
+        }, {
+          "value" : "kurma-earthworks-dev",
+          "name" : "hostname",
+          "certname" : "kurma-earthworks-dev.stanford.edu"
+        }, {
+          "value" : "imageserver-c",
+          "name" : "hostname",
+          "certname" : "imageserver-c.stanford.edu"
+        }, {
+          "value" : "slugbug",
+          "name" : "hostname",
+          "certname" : "slugbug.stanford.edu"
+        }, {
+          "value" : "sul-robots5-test",
+          "name" : "hostname",
+          "certname" : "sul-robots5-test.stanford.edu"
+        }, {
+          "value" : "dlss-dev-jkeck",
+          "name" : "hostname",
+          "certname" : "dlss-dev-jkeck.stanford.edu"
+        }, {
+          "value" : "sw-webapp-d",
+          "name" : "hostname",
+          "certname" : "sw-webapp-d.stanford.edu"
+        }, {
+          "value" : "sulbot-stage",
+          "name" : "hostname",
+          "certname" : "sulbot-stage.stanford.edu"
+        }, {
+          "value" : "orbis-prod",
+          "name" : "hostname",
+          "certname" : "orbis-prod.stanford.edu"
+        }, {
+          "value" : "hydrus-prod",
+          "name" : "hostname",
+          "certname" : "hydrus-prod.stanford.edu"
+        }, {
+          "value" : "dlss-dev-ssklar",
+          "name" : "hostname",
+          "certname" : "dlss-dev-ssklar.stanford.edu"
+        }, {
+          "value" : "sul-dor-test",
+          "name" : "hostname",
+          "certname" : "sul-dor-test.stanford.edu"
+        }, {
+          "value" : "kurma-monitor-prod",
+          "name" : "hostname",
+          "certname" : "kurma-monitor-prod.stanford.edu"
+        }, {
+          "value" : "sul-stacks-dev",
+          "name" : "hostname",
+          "certname" : "sul-stacks-dev.stanford.edu"
+        }, {
+          "value" : "sul-cms-mysql-a",
+          "name" : "hostname",
+          "certname" : "sul-cms-mysql-a.stanford.edu"
+        }, {
+          "value" : "sul-hypatia-dev",
+          "name" : "hostname",
+          "certname" : "sul-hypatia-dev.stanford.edu"
+        }, {
+          "value" : "cw-demo",
+          "name" : "hostname",
+          "certname" : "cw-demo.stanford.edu"
+        }, {
+          "value" : "sw-webapp-c",
+          "name" : "hostname",
+          "certname" : "sw-webapp-c.stanford.edu"
+        }, {
+          "value" : "gsbproxy-b",
+          "name" : "hostname",
+          "certname" : "gsbproxy-b.stanford.edu"
+        }, {
+          "value" : "sul-frda-prod",
+          "name" : "hostname",
+          "certname" : "sul-frda-prod.stanford.edu"
+        }, {
+          "value" : "sulohsdev1",
+          "name" : "hostname",
+          "certname" : "sulohsdev1.stanford.edu"
+        }, {
+          "value" : "coursework-dev8",
+          "name" : "hostname",
+          "certname" : "coursework-dev8.stanford.edu"
+        }, {
+          "value" : "dig-prod",
+          "name" : "hostname",
+          "certname" : "dig-prod.stanford.edu"
+        }, {
+          "value" : "dpglab-db-prod",
+          "name" : "hostname",
+          "certname" : "dpglab-db-prod.stanford.edu"
+        }, {
+          "value" : "squash-dev",
+          "name" : "hostname",
+          "certname" : "squash-dev.stanford.edu"
+        }, {
+          "value" : "sul-solr-c",
+          "name" : "hostname",
+          "certname" : "sul-solr-c.stanford.edu"
+        }, {
+          "value" : "sul-erm-dev",
+          "name" : "hostname",
+          "certname" : "sul-erm-dev.stanford.edu"
+        }, {
+          "value" : "sul-etd-stage",
+          "name" : "hostname",
+          "certname" : "sul-etd-stage.stanford.edu"
+        }, {
+          "value" : "sulpuppet-c",
+          "name" : "hostname",
+          "certname" : "sulpuppet-c.stanford.edu"
+        }, {
+          "value" : "coursework-dev10",
+          "name" : "hostname",
+          "certname" : "coursework-dev10.stanford.edu"
+        }, {
+          "value" : "sw-webapp-stage-a",
+          "name" : "hostname",
+          "certname" : "sw-webapp-stage-a.stanford.edu"
+        }, {
+          "value" : "argo-prod",
+          "name" : "hostname",
+          "certname" : "argo-prod.stanford.edu"
+        }, {
+          "value" : "argo-mysql-stage",
+          "name" : "hostname",
+          "certname" : "argo-mysql-stage.stanford.edu"
+        }, {
+          "value" : "sulmuse-prod",
+          "name" : "hostname",
+          "certname" : "sulmuse-prod.stanford.edu"
+        }, {
+          "value" : "revs-prod",
+          "name" : "hostname",
+          "certname" : "revs-prod.stanford.edu"
+        }, {
+          "value" : "cw5app13",
+          "name" : "hostname",
+          "certname" : "cw5app13.stanford.edu"
+        }, {
+          "value" : "suldbprod2",
+          "name" : "hostname",
+          "certname" : "suldbprod2.stanford.edu"
+        }, {
+          "value" : "sultechservice-prod",
+          "name" : "hostname",
+          "certname" : "sultechservice-prod.stanford.edu"
+        }, {
+          "value" : "sulmcollective",
+          "name" : "hostname",
+          "certname" : "sulmcollective.stanford.edu"
+        }, {
+          "value" : "salt-data-dev",
+          "name" : "hostname",
+          "certname" : "salt-data-dev.stanford.edu"
+        }, {
+          "value" : "sul-robots3-prod",
+          "name" : "hostname",
+          "certname" : "sul-robots3-prod.stanford.edu"
+        }, {
+          "value" : "cw5app11",
+          "name" : "hostname",
+          "certname" : "cw5app11.stanford.edu"
+        }, {
+          "value" : "minna",
+          "name" : "hostname",
+          "certname" : "minna.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-stage-a",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-stage-a.stanford.edu"
+        }, {
+          "value" : "cw5db12",
+          "name" : "hostname",
+          "certname" : "cw5db12.stanford.edu"
+        }, {
+          "value" : "sul-hypatia-prod",
+          "name" : "hostname",
+          "certname" : "sul-hypatia-prod.stanford.edu"
+        }, {
+          "value" : "consul-dev",
+          "name" : "hostname",
+          "certname" : "consul-dev.stanford.edu"
+        }, {
+          "value" : "kurma-robots1-stage",
+          "name" : "hostname",
+          "certname" : "kurma-robots1-stage.stanford.edu"
+        }, {
+          "value" : "argo-dev",
+          "name" : "hostname",
+          "certname" : "argo-dev.stanford.edu"
+        }, {
+          "value" : "libsys-webforms-dev",
+          "name" : "hostname",
+          "certname" : "libsys-webforms-dev.stanford.edu"
+        }, {
+          "value" : "dpglab-db-dev",
+          "name" : "hostname",
+          "certname" : "dpglab-db-dev.stanford.edu"
+        }, {
+          "value" : "kurma-db2-dev",
+          "name" : "hostname",
+          "certname" : "kurma-db2-dev.stanford.edu"
+        }, {
+          "value" : "sw-solr-g",
+          "name" : "hostname",
+          "certname" : "sw-solr-g.stanford.edu"
+        }, {
+          "value" : "dpglab-prod",
+          "name" : "hostname",
+          "certname" : "dpglab-prod.stanford.edu"
+        }, {
+          "value" : "regis",
+          "name" : "hostname",
+          "certname" : "regis.stanford.edu"
+        }, {
+          "value" : "cw5app10",
+          "name" : "hostname",
+          "certname" : "cw5app10.stanford.edu"
+        }, {
+          "value" : "sul-purl-test",
+          "name" : "hostname",
+          "certname" : "sul-purl-test.stanford.edu"
+        }, {
+          "value" : "sul-robots2-test",
+          "name" : "hostname",
+          "certname" : "sul-robots2-test.stanford.edu"
+        }, {
+          "value" : "imageserver-test",
+          "name" : "hostname",
+          "certname" : "imageserver-test.stanford.edu"
+        }, {
+          "value" : "exhibits-prod-a",
+          "name" : "hostname",
+          "certname" : "exhibits-prod-a.stanford.edu"
+        }, {
+          "value" : "sulwebapp4",
+          "name" : "hostname",
+          "certname" : "sulwebapp4.stanford.edu"
+        }, {
+          "value" : "derivatives-prod",
+          "name" : "hostname",
+          "certname" : "derivatives-prod.stanford.edu"
+        }, {
+          "value" : "sulcap-prod",
+          "name" : "hostname",
+          "certname" : "sulcap-prod.stanford.edu"
+        }, {
+          "value" : "sulmq-dev",
+          "name" : "hostname",
+          "certname" : "sulmq-dev.stanford.edu"
+        }, {
+          "value" : "sul-accession-prod",
+          "name" : "hostname",
+          "certname" : "sul-accession-prod.stanford.edu"
+        }, {
+          "value" : "hydrus-dev",
+          "name" : "hostname",
+          "certname" : "hydrus-dev.stanford.edu"
+        }, {
+          "value" : "dlss-dev-atz",
+          "name" : "hostname",
+          "certname" : "dlss-dev-atz.stanford.edu"
+        }, {
+          "value" : "libdbdev1",
+          "name" : "hostname",
+          "certname" : "libdbdev1.stanford.edu"
+        }, {
+          "value" : "heaven-prod",
+          "name" : "hostname",
+          "certname" : "heaven-prod.stanford.edu"
+        }, {
+          "value" : "cw-help",
+          "name" : "hostname",
+          "certname" : "cw-help.stanford.edu"
+        }, {
+          "value" : "regis-dev",
+          "name" : "hostname",
+          "certname" : "regis-dev.stanford.edu"
+        }, {
+          "value" : "cw5app15",
+          "name" : "hostname",
+          "certname" : "cw5app15.stanford.edu"
+        }, {
+          "value" : "sdr-services-test",
+          "name" : "hostname",
+          "certname" : "sdr-services-test.stanford.edu"
+        }, {
+          "value" : "cw5app21",
+          "name" : "hostname",
+          "certname" : "cw5app21.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-stage-b",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-stage-b.stanford.edu"
+        }, {
+          "value" : "argo-prod-b",
+          "name" : "hostname",
+          "certname" : "argo-prod-b.stanford.edu"
+        }, {
+          "value" : "coursework-bo3",
+          "name" : "hostname",
+          "certname" : "coursework-bo3.stanford.edu"
+        }, {
+          "value" : "sul-linked-data-dev",
+          "name" : "hostname",
+          "certname" : "sul-linked-data-dev.stanford.edu"
+        }, {
+          "value" : "sulbot-prod",
+          "name" : "hostname",
+          "certname" : "sulbot-prod.stanford.edu"
+        }, {
+          "value" : "gsbproxy-a",
+          "name" : "hostname",
+          "certname" : "gsbproxy-a.stanford.edu"
+        }, {
+          "value" : "sul-robots2-dev",
+          "name" : "hostname",
+          "certname" : "sul-robots2-dev.stanford.edu"
+        }, {
+          "value" : "jirasul-test",
+          "name" : "hostname",
+          "certname" : "jirasul-test.stanford.edu"
+        }, {
+          "value" : "sul-dor-prod",
+          "name" : "hostname",
+          "certname" : "sul-dor-prod.stanford.edu"
+        }, {
+          "value" : "sulbarstest",
+          "name" : "hostname",
+          "certname" : "sulbarstest.stanford.edu"
+        }, {
+          "value" : "frda-dev",
+          "name" : "hostname",
+          "certname" : "frda-dev.stanford.edu"
+        }, {
+          "value" : "discovery-dispatcher-dev",
+          "name" : "hostname",
+          "certname" : "discovery-dispatcher-dev.stanford.edu"
+        }, {
+          "value" : "sul-purl-dev",
+          "name" : "hostname",
+          "certname" : "sul-purl-dev.stanford.edu"
+        }, {
+          "value" : "cw5app18",
+          "name" : "hostname",
+          "certname" : "cw5app18.stanford.edu"
+        }, {
+          "value" : "dpg-t3",
+          "name" : "hostname",
+          "certname" : "dpg-t3.stanford.edu"
+        }, {
+          "value" : "esp-dev-jgreben",
+          "name" : "hostname",
+          "certname" : "esp-dev-jgreben.stanford.edu"
+        }, {
+          "value" : "sulpuppet-b",
+          "name" : "hostname",
+          "certname" : "sulpuppet-b.stanford.edu"
+        }, {
+          "value" : "sulpuppet-db",
+          "name" : "hostname",
+          "certname" : "sulpuppet-db.stanford.edu"
+        }, {
+          "value" : "sul-dor-dev",
+          "name" : "hostname",
+          "certname" : "sul-dor-dev.stanford.edu"
+        }, {
+          "value" : "triannon-dev",
+          "name" : "hostname",
+          "certname" : "triannon-dev.stanford.edu"
+        }, {
+          "value" : "sulwebappdev2",
+          "name" : "hostname",
+          "certname" : "sulwebappdev2.stanford.edu"
+        }, {
+          "value" : "sw-solr-sirsi-test",
+          "name" : "hostname",
+          "certname" : "sw-solr-sirsi-test.stanford.edu"
+        }, {
+          "value" : "coursework-qa2",
+          "name" : "hostname",
+          "certname" : "coursework-qa2.stanford.edu"
+        }, {
+          "value" : "sul-cms-mysql-stage-b",
+          "name" : "hostname",
+          "certname" : "sul-cms-mysql-stage-b.stanford.edu"
+        }, {
+          "value" : "libdbprod2",
+          "name" : "hostname",
+          "certname" : "libdbprod2.stanford.edu"
+        }, {
+          "value" : "cw5db14",
+          "name" : "hostname",
+          "certname" : "cw5db14.stanford.edu"
+        }, {
+          "value" : "sul-sedora-dev",
+          "name" : "hostname",
+          "certname" : "sul-sedora-dev.stanford.edu"
+        }, {
+          "value" : "sul-spec-mysql-prod",
+          "name" : "hostname",
+          "certname" : "sul-spec-mysql-prod.stanford.edu"
+        }, {
+          "value" : "bv-prod",
+          "name" : "hostname",
+          "certname" : "bv-prod.stanford.edu"
+        }, {
+          "value" : "consul-prod",
+          "name" : "hostname",
+          "certname" : "consul-prod.stanford.edu"
+        }, {
+          "value" : "cw5app12",
+          "name" : "hostname",
+          "certname" : "cw5app12.stanford.edu"
+        }, {
+          "value" : "coursework-dev2",
+          "name" : "hostname",
+          "certname" : "coursework-dev2.stanford.edu"
+        }, {
+          "value" : "cw5app16",
+          "name" : "hostname",
+          "certname" : "cw5app16.stanford.edu"
+        }, {
+          "value" : "xsearch-prod",
+          "name" : "hostname",
+          "certname" : "xsearch-prod.stanford.edu"
+        }, {
+          "value" : "cidr-kindred-britain-edit",
+          "name" : "hostname",
+          "certname" : "cidr-kindred-britain-edit.stanford.edu"
+        }, {
+          "value" : "sw-solr-test-b",
+          "name" : "hostname",
+          "certname" : "sw-solr-test-b.stanford.edu"
+        }, {
+          "value" : "sul-sfx",
+          "name" : "hostname",
+          "certname" : "sul-sfx.stanford.edu"
+        }, {
+          "value" : "cw5app20",
+          "name" : "hostname",
+          "certname" : "cw5app20.stanford.edu"
+        }, {
+          "value" : "sulcap-mysql-qa",
+          "name" : "hostname",
+          "certname" : "sulcap-mysql-qa.stanford.edu"
+        }, {
+          "value" : "dpn-dev-node-b",
+          "name" : "hostname",
+          "certname" : "dpn-dev-node-b.stanford.edu"
+        }, {
+          "value" : "leavenworth",
+          "name" : "hostname",
+          "certname" : "leavenworth.stanford.edu"
+        }, {
+          "value" : "sul-spec-mysql-test",
+          "name" : "hostname",
+          "certname" : "sul-spec-mysql-test.stanford.edu"
+        }, {
+          "value" : "xsearch-test",
+          "name" : "hostname",
+          "certname" : "xsearch-test.stanford.edu"
+        }, {
+          "value" : "sul-cms-dev",
+          "name" : "hostname",
+          "certname" : "sul-cms-dev.stanford.edu"
+        }, {
+          "value" : "cw5app17",
+          "name" : "hostname",
+          "certname" : "cw5app17.stanford.edu"
+        }, {
+          "value" : "sw-solr-c",
+          "name" : "hostname",
+          "certname" : "sw-solr-c.stanford.edu"
+        }, {
+          "value" : "was-registrar-dev",
+          "name" : "hostname",
+          "certname" : "was-registrar-dev.stanford.edu"
+        }, {
+          "value" : "coursework-dev11",
+          "name" : "hostname",
+          "certname" : "coursework-dev11.stanford.edu"
+        }, {
+          "value" : "sul-parker-prod",
+          "name" : "hostname",
+          "certname" : "sul-parker-prod.stanford.edu"
+        }, {
+          "value" : "cw-dynamics",
+          "name" : "hostname",
+          "certname" : "cw-dynamics.stanford.edu"
+        }, {
+          "value" : "dlss-dev-drh",
+          "name" : "hostname",
+          "certname" : "dlss-dev-drh.stanford.edu"
+        }, {
+          "value" : "sw-webapp-stage-c",
+          "name" : "hostname",
+          "certname" : "sw-webapp-stage-c.stanford.edu"
+        }, {
+          "value" : "sw-webapp-mysql-prod-a",
+          "name" : "hostname",
+          "certname" : "sw-webapp-mysql-prod-a.stanford.edu"
+        }, {
+          "value" : "sul-parker-stage",
+          "name" : "hostname",
+          "certname" : "sul-parker-stage.stanford.edu"
+        }, {
+          "value" : "sul-cms-mysql-stage",
+          "name" : "hostname",
+          "certname" : "sul-cms-mysql-stage.stanford.edu"
+        }, {
+          "value" : "cidr-kindred-britain-prod",
+          "name" : "hostname",
+          "certname" : "cidr-kindred-britain-prod.stanford.edu"
+        }, {
+          "value" : "sul-smpl",
+          "name" : "hostname",
+          "certname" : "sul-smpl.stanford.edu"
+        }, {
+          "value" : "dlss-dev-tommyi",
+          "name" : "hostname",
+          "certname" : "dlss-dev-tommyi.stanford.edu"
+        }, {
+          "value" : "coursework-qa5",
+          "name" : "hostname",
+          "certname" : "coursework-qa5.stanford.edu"
+        }, {
+          "value" : "sul-frda-stage",
+          "name" : "hostname",
+          "certname" : "sul-frda-stage.stanford.edu"
+        }, {
+          "value" : "sul-solr-tester",
+          "name" : "hostname",
+          "certname" : "sul-solr-tester.stanford.edu"
+        }, {
+          "value" : "sul-cms-web-b",
+          "name" : "hostname",
+          "certname" : "sul-cms-web-b.stanford.edu"
+        }, {
+          "value" : "sul-erm",
+          "name" : "hostname",
+          "certname" : "sul-erm.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-legacy-prod",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-legacy-prod.stanford.edu"
+        }, {
+          "value" : "coursework-qa8",
+          "name" : "hostname",
+          "certname" : "coursework-qa8.stanford.edu"
+        }, {
+          "value" : "dlss-dev-geisler",
+          "name" : "hostname",
+          "certname" : "dlss-dev-geisler.stanford.edu"
+        }, {
+          "value" : "imageserver-a",
+          "name" : "hostname",
+          "certname" : "imageserver-a.stanford.edu"
+        }, {
+          "value" : "sul-loris-stage",
+          "name" : "hostname",
+          "certname" : "sul-loris-stage.stanford.edu"
+        }, {
+          "value" : "kurma-monitor-stage",
+          "name" : "hostname",
+          "certname" : "kurma-monitor-stage.stanford.edu"
+        }, {
+          "value" : "sul-depot",
+          "name" : "hostname",
+          "certname" : "sul-depot.stanford.edu"
+        }, {
+          "value" : "dor-indexing-app-dev",
+          "name" : "hostname",
+          "certname" : "dor-indexing-app-dev.stanford.edu"
+        }, {
+          "value" : "sulreports",
+          "name" : "hostname",
+          "certname" : "sulreports.stanford.edu"
+        }, {
+          "value" : "sul-cms-test",
+          "name" : "hostname",
+          "certname" : "sul-cms-test.stanford.edu"
+        }, {
+          "value" : "harvestdor-prod",
+          "name" : "hostname",
+          "certname" : "harvestdor-prod.stanford.edu"
+        }, {
+          "value" : "was-registrar-stage",
+          "name" : "hostname",
+          "certname" : "was-registrar-stage.stanford.edu"
+        }, {
+          "value" : "dlss-dev-rsmith11",
+          "name" : "hostname",
+          "certname" : "dlss-dev-rsmith11.stanford.edu"
+        }, {
+          "value" : "htext-prod",
+          "name" : "hostname",
+          "certname" : "htext-prod.stanford.edu"
+        }, {
+          "value" : "suldb2",
+          "name" : "hostname",
+          "certname" : "suldb2.stanford.edu"
+        }, {
+          "value" : "sdr-services-test2",
+          "name" : "hostname",
+          "certname" : "sdr-services-test2.stanford.edu"
+        }, {
+          "value" : "suldb1",
+          "name" : "hostname",
+          "certname" : "suldb1.stanford.edu"
+        }, {
+          "value" : "sul-robots1-dev",
+          "name" : "hostname",
+          "certname" : "sul-robots1-dev.stanford.edu"
+        }, {
+          "value" : "kurma-db2-stage",
+          "name" : "hostname",
+          "certname" : "kurma-db2-stage.stanford.edu"
+        }, {
+          "value" : "dlss-dev-azaroth",
+          "name" : "hostname",
+          "certname" : "dlss-dev-azaroth.stanford.edu"
+        }, {
+          "value" : "sul-fedora-stage-a",
+          "name" : "hostname",
+          "certname" : "sul-fedora-stage-a.stanford.edu"
+        }, {
+          "value" : "sulmq-prod-b",
+          "name" : "hostname",
+          "certname" : "sulmq-prod-b.stanford.edu"
+        }, {
+          "value" : "purl-fetcher-dev",
+          "name" : "hostname",
+          "certname" : "purl-fetcher-dev.stanford.edu"
+        }, {
+          "value" : "xsearch-stage",
+          "name" : "hostname",
+          "certname" : "xsearch-stage.stanford.edu"
+        }, {
+          "value" : "dlss-dev-ndushay",
+          "name" : "hostname",
+          "certname" : "dlss-dev-ndushay.stanford.edu"
+        }, {
+          "value" : "sul-datasets-prod",
+          "name" : "hostname",
+          "certname" : "sul-datasets-prod.stanford.edu"
+        }, {
+          "value" : "standish-prod",
+          "name" : "hostname",
+          "certname" : "standish-prod.stanford.edu"
+        }, {
+          "value" : "was-registrar",
+          "name" : "hostname",
+          "certname" : "was-registrar.stanford.edu"
+        }, {
+          "value" : "dpglab-dev",
+          "name" : "hostname",
+          "certname" : "dpglab-dev.stanford.edu"
+        }, {
+          "value" : "libstream",
+          "name" : "hostname",
+          "certname" : "libstream.stanford.edu"
+        }, {
+          "value" : "sulcap-mysql-prod",
+          "name" : "hostname",
+          "certname" : "sulcap-mysql-prod.stanford.edu"
+        }, {
+          "value" : "kurma-db1-dev",
+          "name" : "hostname",
+          "certname" : "kurma-db1-dev.stanford.edu"
+        }, {
+          "value" : "sulmq-prod-a",
+          "name" : "hostname",
+          "certname" : "sulmq-prod-a.stanford.edu"
+        }, {
+          "value" : "dlss-dev-jchris",
+          "name" : "hostname",
+          "certname" : "dlss-dev-jchris.stanford.edu"
+        }, {
+          "value" : "requests-dev",
+          "name" : "hostname",
+          "certname" : "requests-dev.stanford.edu"
+        }, {
+          "value" : "sul-robots1-prod",
+          "name" : "hostname",
+          "certname" : "sul-robots1-prod.stanford.edu"
+        }, {
+          "value" : "sul-loris-prod",
+          "name" : "hostname",
+          "certname" : "sul-loris-prod.stanford.edu"
+        }, {
+          "value" : "argo-mysql-prod",
+          "name" : "hostname",
+          "certname" : "argo-mysql-prod.stanford.edu"
+        }, {
+          "value" : "dlss-dev-dlweber",
+          "name" : "hostname",
+          "certname" : "dlss-dev-dlweber.stanford.edu"
+        }, {
+          "value" : "coursework-dev3",
+          "name" : "hostname",
+          "certname" : "coursework-dev3.stanford.edu"
+        }, {
+          "value" : "sul-solr-test-c",
+          "name" : "hostname",
+          "certname" : "sul-solr-test-c.stanford.edu"
+        }, {
+          "value" : "dlss-dev-ntay",
+          "name" : "hostname",
+          "certname" : "dlss-dev-ntay.stanford.edu"
+        }, {
+          "value" : "sul-sdr-services",
+          "name" : "hostname",
+          "certname" : "sul-sdr-services.stanford.edu"
+        }, {
+          "value" : "sul-eems-prod",
+          "name" : "hostname",
+          "certname" : "sul-eems-prod.stanford.edu"
+        }, {
+          "value" : "sul-las-prod",
+          "name" : "hostname",
+          "certname" : "sul-las-prod.stanford.edu"
+        }, {
+          "value" : "sul-stacks-test",
+          "name" : "hostname",
+          "certname" : "sul-stacks-test.stanford.edu"
+        }, {
+          "value" : "sul-maps",
+          "name" : "hostname",
+          "certname" : "sul-maps.stanford.edu"
+        }, {
+          "value" : "moria",
+          "name" : "hostname",
+          "certname" : "moria.stanford.edu"
+        }, {
+          "value" : "sul-cms-web-a",
+          "name" : "hostname",
+          "certname" : "sul-cms-web-a.stanford.edu"
+        }, {
+          "value" : "sw-solr-test-a",
+          "name" : "hostname",
+          "certname" : "sw-solr-test-a.stanford.edu"
+        }, {
+          "value" : "kurma-db1-stage",
+          "name" : "hostname",
+          "certname" : "kurma-db1-stage.stanford.edu"
+        }, {
+          "value" : "embed-stage",
+          "name" : "hostname",
+          "certname" : "embed-stage.stanford.edu"
+        }, {
+          "value" : "triannon-stage-a",
+          "name" : "hostname",
+          "certname" : "triannon-stage-a.stanford.edu"
+        }, {
+          "value" : "sulwebapp5",
+          "name" : "hostname",
+          "certname" : "sulwebapp5.stanford.edu"
+        }, {
+          "value" : "sul-solr-test-a",
+          "name" : "hostname",
+          "certname" : "sul-solr-test-a.stanford.edu"
+        }, {
+          "value" : "kurma-opengeometadata-prod",
+          "name" : "hostname",
+          "certname" : "kurma-opengeometadata-prod.stanford.edu"
+        }, {
+          "value" : "xtf-prod",
+          "name" : "hostname",
+          "certname" : "xtf-prod.stanford.edu"
+        }, {
+          "value" : "coursework-dev6",
+          "name" : "hostname",
+          "certname" : "coursework-dev6.stanford.edu"
+        }, {
+          "value" : "sul-las-stage",
+          "name" : "hostname",
+          "certname" : "sul-las-stage.stanford.edu"
+        }, {
+          "value" : "sw-webapp-b",
+          "name" : "hostname",
+          "certname" : "sw-webapp-b.stanford.edu"
+        }, {
+          "value" : "kurma-robots1-dev",
+          "name" : "hostname",
+          "certname" : "kurma-robots1-dev.stanford.edu"
+        }, {
+          "value" : "jenkinsqa",
+          "name" : "hostname",
+          "certname" : "jenkinsqa.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver2-stage",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver2-stage.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver2-stan-prod",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver2-stan-prod.stanford.edu"
+        }, {
+          "value" : "harvestdor-dev",
+          "name" : "hostname",
+          "certname" : "harvestdor-dev.stanford.edu"
+        }, {
+          "value" : "sul-robots1-test",
+          "name" : "hostname",
+          "certname" : "sul-robots1-test.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver1-stan-prod",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver1-stan-prod.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver1-dev",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver1-dev.stanford.edu"
+        }, {
+          "value" : "sul-solr-zk-prod-b",
+          "name" : "hostname",
+          "certname" : "sul-solr-zk-prod-b.stanford.edu"
+        }, {
+          "value" : "revs-indexing-stage",
+          "name" : "hostname",
+          "certname" : "revs-indexing-stage.stanford.edu"
+        }, {
+          "value" : "sw-mysql-stage-b",
+          "name" : "hostname",
+          "certname" : "sw-mysql-stage-b.stanford.edu"
+        }, {
+          "value" : "gsbproxy-test-a",
+          "name" : "hostname",
+          "certname" : "gsbproxy-test-a.stanford.edu"
+        }, {
+          "value" : "sul-solr-d",
+          "name" : "hostname",
+          "certname" : "sul-solr-d.stanford.edu"
+        }, {
+          "value" : "purl-fetcher-prod",
+          "name" : "hostname",
+          "certname" : "purl-fetcher-prod.stanford.edu"
+        }, {
+          "value" : "sw-indexing-stage",
+          "name" : "hostname",
+          "certname" : "sw-indexing-stage.stanford.edu"
+        }, {
+          "value" : "lib-stage",
+          "name" : "hostname",
+          "certname" : "lib-stage.stanford.edu"
+        }, {
+          "value" : "sul-library-hours-dev",
+          "name" : "hostname",
+          "certname" : "sul-library-hours-dev.stanford.edu"
+        }, {
+          "value" : "sul-solr-zk-prod-c",
+          "name" : "hostname",
+          "certname" : "sul-solr-zk-prod-c.stanford.edu"
+        }, {
+          "value" : "sw-solr-a",
+          "name" : "hostname",
+          "certname" : "sw-solr-a.stanford.edu"
+        }, {
+          "value" : "sw-solr-stage-c",
+          "name" : "hostname",
+          "certname" : "sw-solr-stage-c.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver2-dev",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver2-dev.stanford.edu"
+        }, {
+          "value" : "sw-webapp-stage-b",
+          "name" : "hostname",
+          "certname" : "sw-webapp-stage-b.stanford.edu"
+        }, {
+          "value" : "sulbars30",
+          "name" : "hostname",
+          "certname" : "sulbars30.stanford.edu"
+        }, {
+          "value" : "sul-lyberservices-dev",
+          "name" : "hostname",
+          "certname" : "sul-lyberservices-dev.stanford.edu"
+        }, {
+          "value" : "salt-data-prod",
+          "name" : "hostname",
+          "certname" : "salt-data-prod.stanford.edu"
+        }, {
+          "value" : "sultechservice-test",
+          "name" : "hostname",
+          "certname" : "sultechservice-test.stanford.edu"
+        }, {
+          "value" : "workflow-dev",
+          "name" : "hostname",
+          "certname" : "workflow-dev.stanford.edu"
+        }, {
+          "value" : "imageserver-b",
+          "name" : "hostname",
+          "certname" : "imageserver-b.stanford.edu"
+        }, {
+          "value" : "sul-cms-cache-a",
+          "name" : "hostname",
+          "certname" : "sul-cms-cache-a.stanford.edu"
+        }, {
+          "value" : "was-thumbnail-stage",
+          "name" : "hostname",
+          "certname" : "was-thumbnail-stage.stanford.edu"
+        }, {
+          "value" : "lib-prod",
+          "name" : "hostname",
+          "certname" : "lib-prod.stanford.edu"
+        }, {
+          "value" : "sulbars20",
+          "name" : "hostname",
+          "certname" : "sulbars20.stanford.edu"
+        }, {
+          "value" : "libwebdev1",
+          "name" : "hostname",
+          "certname" : "libwebdev1.stanford.edu"
+        }, {
+          "value" : "sw-indexing-prod",
+          "name" : "hostname",
+          "certname" : "sw-indexing-prod.stanford.edu"
+        }, {
+          "value" : "kurma-opengeometadata-stage",
+          "name" : "hostname",
+          "certname" : "kurma-opengeometadata-stage.stanford.edu"
+        }, {
+          "value" : "coursework-dev12",
+          "name" : "hostname",
+          "certname" : "coursework-dev12.stanford.edu"
+        }, {
+          "value" : "sul-library-hours-prod",
+          "name" : "hostname",
+          "certname" : "sul-library-hours-prod.stanford.edu"
+        }, {
+          "value" : "sul-spec-as-stage",
+          "name" : "hostname",
+          "certname" : "sul-spec-as-stage.stanford.edu"
+        }, {
+          "value" : "bibliopedia-dev",
+          "name" : "hostname",
+          "certname" : "bibliopedia-dev.stanford.edu"
+        }, {
+          "value" : "sulohsprod1",
+          "name" : "hostname",
+          "certname" : "sulohsprod1.stanford.edu"
+        }, {
+          "value" : "was-thumbnail-prod",
+          "name" : "hostname",
+          "certname" : "was-thumbnail-prod.stanford.edu"
+        }, {
+          "value" : "suri-dev",
+          "name" : "hostname",
+          "certname" : "suri-dev.stanford.edu"
+        }, {
+          "value" : "sul-opinio-prod",
+          "name" : "hostname",
+          "certname" : "sul-opinio-prod.stanford.edu"
+        }, {
+          "value" : "argo-stage-a",
+          "name" : "hostname",
+          "certname" : "argo-stage-a.stanford.edu"
+        }, {
+          "value" : "dlss-releases-prod",
+          "name" : "hostname",
+          "certname" : "dlss-releases-prod.stanford.edu"
+        }, {
+          "value" : "libwebprod1",
+          "name" : "hostname",
+          "certname" : "libwebprod1.stanford.edu"
+        }, {
+          "value" : "sw-mysql-stage-a",
+          "name" : "hostname",
+          "certname" : "sw-mysql-stage-a.stanford.edu"
+        }, {
+          "value" : "was-downloader",
+          "name" : "hostname",
+          "certname" : "was-downloader.stanford.edu"
+        }, {
+          "value" : "sw-solr-stage-b",
+          "name" : "hostname",
+          "certname" : "sw-solr-stage-b.stanford.edu"
+        }, {
+          "value" : "sul-bookdata-prod",
+          "name" : "hostname",
+          "certname" : "sul-bookdata-prod.stanford.edu"
+        }, {
+          "value" : "revs-indexing-dev",
+          "name" : "hostname",
+          "certname" : "revs-indexing-dev.stanford.edu"
+        }, {
+          "value" : "sw-webapp-sandbox-a",
+          "name" : "hostname",
+          "certname" : "sw-webapp-sandbox-a.stanford.edu"
+        }, {
+          "value" : "sul-directory-prod",
+          "name" : "hostname",
+          "certname" : "sul-directory-prod.stanford.edu"
+        }, {
+          "value" : "sw-webapp-sandbox-b",
+          "name" : "hostname",
+          "certname" : "sw-webapp-sandbox-b.stanford.edu"
+        }, {
+          "value" : "slugbug2",
+          "name" : "hostname",
+          "certname" : "slugbug2.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver1-stage",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver1-stage.stanford.edu"
+        }, {
+          "value" : "sul-spec-as-prod",
+          "name" : "hostname",
+          "certname" : "sul-spec-as-prod.stanford.edu"
+        }, {
+          "value" : "discovery-dispatcher-prod",
+          "name" : "hostname",
+          "certname" : "discovery-dispatcher-prod.stanford.edu"
+        }, {
+          "value" : "purl-fetcher-stage",
+          "name" : "hostname",
+          "certname" : "purl-fetcher-stage.stanford.edu"
+        }, {
+          "value" : "sw-webapp-sandbox-c",
+          "name" : "hostname",
+          "certname" : "sw-webapp-sandbox-c.stanford.edu"
+        }, {
+          "value" : "humanities-design",
+          "name" : "hostname",
+          "certname" : "humanities-design.stanford.edu"
+        }, {
+          "value" : "sul-solr-zk-prod-a",
+          "name" : "hostname",
+          "certname" : "sul-solr-zk-prod-a.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver2-pub-prod",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver2-pub-prod.stanford.edu"
+        }, {
+          "value" : "sul-directory-dev",
+          "name" : "hostname",
+          "certname" : "sul-directory-dev.stanford.edu"
+        }, {
+          "value" : "kurma-geoserver1-pub-prod",
+          "name" : "hostname",
+          "certname" : "kurma-geoserver1-pub-prod.stanford.edu"
+        }, {
+          "value" : "discovery-dispatcher-stage",
+          "name" : "hostname",
+          "certname" : "discovery-dispatcher-stage.stanford.edu"
+        }, {
+          "value" : "sw-solr-stage-a",
+          "name" : "hostname",
+          "certname" : "sw-solr-stage-a.stanford.edu"
+        }, {
+          "value" : "sul-wowza-dev",
+          "name" : "hostname",
+          "certname" : "sul-wowza-dev.stanford.edu"
+        }, {
+          "value" : "dlss-dev-petucket",
+          "name" : "hostname",
+          "certname" : "dlss-dev-petucket.stanford.edu"
+        }, {
+          "value" : "sul-revs-prod",
+          "name" : "hostname",
+          "certname" : "sul-revs-prod.stanford.edu"
+        }, {
+          "value" : "salt-assembly-prod",
+          "name" : "hostname",
+          "certname" : "salt-assembly-prod.stanford.edu"
+        }, {
+          "value" : "sul-robots5-prod",
+          "name" : "hostname",
+          "certname" : "sul-robots5-prod.stanford.edu"
+        }, {
+          "value" : "cidr-rails-sandbox",
+          "name" : "hostname",
+          "certname" : "cidr-rails-sandbox.stanford.edu"
+        }, {
+          "value" : "sul-nagios-prod",
+          "name" : "hostname",
+          "certname" : "sul-nagios-prod.stanford.edu"
+        }, {
+          "value" : "exhibits-mysql-prod",
+          "name" : "hostname",
+          "certname" : "exhibits-mysql-prod.stanford.edu"
+        }, {
+          "value" : "exhibits-prod-b",
+          "name" : "hostname",
+          "certname" : "exhibits-prod-b.stanford.edu"
+        }, {
+          "value" : "cidr-dev-dclure",
+          "name" : "hostname",
+          "certname" : "cidr-dev-dclure.stanford.edu"
+        }, {
+          "value" : "sulstats-process-c",
+          "name" : "hostname",
+          "certname" : "sulstats-process-c.stanford.edu"
+        }, {
+          "value" : "cidr-kindred-stage",
+          "name" : "hostname",
+          "certname" : "cidr-kindred-stage.stanford.edu"
+        }, {
+          "value" : "sul-robots4-prod",
+          "name" : "hostname",
+          "certname" : "sul-robots4-prod.stanford.edu"
+        }, {
+          "value" : "sul-stacks-prod-a",
+          "name" : "hostname",
+          "certname" : "sul-stacks-prod-a.stanford.edu"
+        }, {
+          "value" : "sul-cms-mysql-b",
+          "name" : "hostname",
+          "certname" : "sul-cms-mysql-b.stanford.edu"
+        }, {
+          "value" : "sul-squash-stage",
+          "name" : "hostname",
+          "certname" : "sul-squash-stage.stanford.edu"
+        }, {
+          "value" : "suldewi",
+          "name" : "hostname",
+          "certname" : "suldewi.stanford.edu"
+        }, {
+          "value" : "sul-dms-demo",
+          "name" : "hostname",
+          "certname" : "sul-dms-demo.stanford.edu"
+        }, {
+          "value" : "sul-purl-prod-a",
+          "name" : "hostname",
+          "certname" : "sul-purl-prod-a.stanford.edu"
+        }, {
+          "value" : "requests-prod",
+          "name" : "hostname",
+          "certname" : "requests-prod.stanford.edu"
+        }, {
+          "value" : "sw-webapp-bot-b",
+          "name" : "hostname",
+          "certname" : "sw-webapp-bot-b.stanford.edu"
+        }, {
+          "value" : "cidr-dev-karlg",
+          "name" : "hostname",
+          "certname" : "cidr-dev-karlg.stanford.edu"
+        }, {
+          "value" : "sul-sdr-services-dev",
+          "name" : "hostname",
+          "certname" : "sul-sdr-services-dev.stanford.edu"
+        }, {
+          "value" : "badwolf",
+          "name" : "hostname",
+          "certname" : "badwolf.stanford.edu"
+        }, {
+          "value" : "sulstats-process-a",
+          "name" : "hostname",
+          "certname" : "sulstats-process-a.stanford.edu"
+        }, {
+          "value" : "webcapture-stage",
+          "name" : "hostname",
+          "certname" : "webcapture-stage.stanford.edu"
+        }, {
+          "value" : "cw5db1",
+          "name" : "hostname",
+          "certname" : "cw5db1.stanford.edu"
+        }, {
+          "value" : "sw-webapp-bot-a",
+          "name" : "hostname",
+          "certname" : "sw-webapp-bot-a.stanford.edu"
+        }, {
+          "value" : "argo-test",
+          "name" : "hostname",
+          "certname" : "argo-test.stanford.edu"
+        }, {
+          "value" : "sw-webapp-mysql-prod-b",
+          "name" : "hostname",
+          "certname" : "sw-webapp-mysql-prod-b.stanford.edu"
+        }, {
+          "value" : "dlss-dev-jonrober",
+          "name" : "hostname",
+          "certname" : "dlss-dev-jonrober.stanford.edu"
+        }, {
+          "value" : "salt-app",
+          "name" : "hostname",
+          "certname" : "salt-app.stanford.edu"
+        }, {
+          "value" : "sul-lyberservices-prod",
+          "name" : "hostname",
+          "certname" : "sul-lyberservices-prod.stanford.edu"
+        }, {
+          "value" : "sul-cdn-stage",
+          "name" : "hostname",
+          "certname" : "sul-cdn-stage.stanford.edu"
+        }, {
+          "value" : "sul-stacks-prod-b",
+          "name" : "hostname",
+          "certname" : "sul-stacks-prod-b.stanford.edu"
+        }, {
+          "value" : "sul-wowza-prod",
+          "name" : "hostname",
+          "certname" : "sul-wowza-prod.stanford.edu"
+        }, {
+          "value" : "exhibits-stage",
+          "name" : "hostname",
+          "certname" : "exhibits-stage.stanford.edu"
+        }, {
+          "value" : "kurma-earthworks2-prod",
+          "name" : "hostname",
+          "certname" : "kurma-earthworks2-prod.stanford.edu"
+        }, {
+          "value" : "sw-solr-b",
+          "name" : "hostname",
+          "certname" : "sw-solr-b.stanford.edu"
+        }, {
+          "value" : "coursework-dev7",
+          "name" : "hostname",
+          "certname" : "coursework-dev7.stanford.edu"
+        }, {
+          "value" : "webcapture-prod",
+          "name" : "hostname",
+          "certname" : "webcapture-prod.stanford.edu"
+        }, {
+          "value" : "bibliopedia-prod",
+          "name" : "hostname",
+          "certname" : "bibliopedia-prod.stanford.edu"
+        }, {
+          "value" : "dlss-ruby-sandbox",
+          "name" : "hostname",
+          "certname" : "dlss-ruby-sandbox.stanford.edu"
+        }, {
+          "value" : "sul-nagios-stage",
+          "name" : "hostname",
+          "certname" : "sul-nagios-stage.stanford.edu"
+        }, {
+          "value" : "sul-purl-prod-b",
+          "name" : "hostname",
+          "certname" : "sul-purl-prod-b.stanford.edu"
+        }, {
+          "value" : "sulpuppet-a",
+          "name" : "hostname",
+          "certname" : "sulpuppet-a.stanford.edu"
+        }, {
+          "value" : "cidr-graves-dev",
+          "name" : "hostname",
+          "certname" : "cidr-graves-dev.stanford.edu"
+        }, {
+          "value" : "argo-stage-b",
+          "name" : "hostname",
+          "certname" : "argo-stage-b.stanford.edu"
+        }, {
+          "value" : "image-viewer-prod",
+          "name" : "hostname",
+          "certname" : "image-viewer-prod.stanford.edu"
+        }, {
+          "value" : "sulstats-process-b",
+          "name" : "hostname",
+          "certname" : "sulstats-process-b.stanford.edu"
+        }, {
+          "value" : "kurma-geo4libcamp-prod",
+          "name" : "hostname",
+          "certname" : "kurma-geo4libcamp-prod.stanford.edu"
+        }, {
+          "value" : "webcapture-dev",
+          "name" : "hostname",
+          "certname" : "webcapture-dev.stanford.edu"
+        }, {
+          "value" : "was-thumbnail-dev",
+          "name" : "hostname",
+          "certname" : "was-thumbnail-dev.stanford.edu"
+        }, {
+          "value" : "cidr-authorial-stage",
+          "name" : "hostname",
+          "certname" : "cidr-authorial-stage.stanford.edu"
+        }, {
+          "value" : "sul-sedora-prod",
+          "name" : "hostname",
+          "certname" : "sul-sedora-prod.stanford.edu"
+        }, {
+          "value" : "sul-solr-b",
+          "name" : "hostname",
+          "certname" : "sul-solr-b.stanford.edu"
+        }, {
+          "value" : "sul-cdn-prod",
+          "name" : "hostname",
+          "certname" : "sul-cdn-prod.stanford.edu"
+        }, {
+          "value" : "cidr-authorial-prod",
+          "name" : "hostname",
+          "certname" : "cidr-authorial-prod.stanford.edu"
+        }, {
+          "value" : "sul-cdn-dev",
+          "name" : "hostname",
+          "certname" : "sul-cdn-dev.stanford.edu"
+        }, {
+          "value" : "embed-prod-b",
+          "name" : "hostname",
+          "certname" : "embed-prod-b.stanford.edu"
+        }, {
+          "value" : "cw5db13",
+          "name" : "hostname",
+          "certname" : "cw5db13.stanford.edu"
+        }, {
+          "value" : "coursework-qa3",
+          "name" : "hostname",
+          "certname" : "coursework-qa3.stanford.edu"
+        }, {
+          "value" : "sul-solr-e",
+          "name" : "hostname",
+          "certname" : "sul-solr-e.stanford.edu"
+        }, {
+          "value" : "coursework-qa1",
+          "name" : "hostname",
+          "certname" : "coursework-qa1.stanford.edu"
+        }, {
+          "value" : "turk-vm",
+          "name" : "hostname",
+          "certname" : "turk-vm.stanford.edu"
+        }, {
+          "value" : "cidr-graves-stage",
+          "name" : "hostname",
+          "certname" : "cidr-graves-stage.stanford.edu"
+        }, {
+          "value" : "imageserver-dev",
+          "name" : "hostname",
+          "certname" : "imageserver-dev.stanford.edu"
+        }, {
+          "value" : "sul-lyberservices-test",
+          "name" : "hostname",
+          "certname" : "sul-lyberservices-test.stanford.edu"
+        }, {
+          "value" : "coursework-dev9",
+          "name" : "hostname",
+          "certname" : "coursework-dev9.stanford.edu"
+        }, {
+          "value" : "coursework-qa7",
+          "name" : "hostname",
+          "certname" : "coursework-qa7.stanford.edu"
+        }, {
+          "value" : "kurma-geo4libcamp-dev",
+          "name" : "hostname",
+          "certname" : "kurma-geo4libcamp-dev.stanford.edu"
+        }, {
+          "value" : "sul-pipeline-dev",
+          "name" : "hostname",
+          "certname" : "sul-pipeline-dev.stanford.edu"
+        }, {
+          "value" : "revs-indexing-prod",
+          "name" : "hostname",
+          "certname" : "revs-indexing-prod.stanford.edu"
+        }, {
+          "value" : "kurma-earthworks-stage",
+          "name" : "hostname",
+          "certname" : "kurma-earthworks-stage.stanford.edu"
+        }, {
+          "value" : "cidr-graves-prod",
+          "name" : "hostname",
+          "certname" : "cidr-graves-prod.stanford.edu"
+        }, {
+          "value" : "collections-prod",
+          "name" : "hostname",
+          "certname" : "collections-prod.stanford.edu"
+        }, {
+          "value" : "cidr-kindred-prod",
+          "name" : "hostname",
+          "certname" : "cidr-kindred-prod.stanford.edu"
+        }, {
+          "value" : "requests-stage",
+          "name" : "hostname",
+          "certname" : "requests-stage.stanford.edu"
+        }, {
+          "value" : "sul-squash-prod",
+          "name" : "hostname",
+          "certname" : "sul-squash-prod.stanford.edu"
+        }, {
+          "value" : "helicat-prod",
+          "name" : "hostname",
+          "certname" : "helicat-prod.stanford.edu"
+        }, {
+          "value" : "sul-dms-discovery-prod",
+          "name" : "hostname",
+          "certname" : "sul-dms-discovery-prod.stanford.edu"
+        }, {
+          "value" : "sul-pub-dev",
+          "name" : "hostname",
+          "certname" : "sul-pub-dev.stanford.edu"
+        }, {
+          "value" : "hybox-dev",
+          "name" : "hostname",
+          "certname" : "hybox-dev.stanford.edu"
+        }, {
+          "value" : "sul-dms-discovery-stage",
+          "name" : "hostname",
+          "certname" : "sul-dms-discovery-stage.stanford.edu"
+        }, {
+          "value" : "sw-webapp-sandbox-e",
+          "name" : "hostname",
+          "certname" : "sw-webapp-sandbox-e.stanford.edu"
+        }, {
+          "value" : "sul-reserves-prod",
+          "name" : "hostname",
+          "certname" : "sul-reserves-prod.stanford.edu"
+        }, {
+          "value" : "sw-solr-gdor-stage",
+          "name" : "hostname",
+          "certname" : "sw-solr-gdor-stage.stanford.edu"
+        }, {
+          "value" : "sfm-stage",
+          "name" : "hostname",
+          "certname" : "sfm-stage.stanford.edu"
+        }, {
+          "value" : "sw-indexing-dev",
+          "name" : "hostname",
+          "certname" : "sw-indexing-dev.stanford.edu"
+        }, {
+          "value" : "sul-reserves-dev",
+          "name" : "hostname",
+          "certname" : "sul-reserves-dev.stanford.edu"
+        }, {
+          "value" : "sw-webapp-sandbox-d",
+          "name" : "hostname",
+          "certname" : "sw-webapp-sandbox-d.stanford.edu"
+        }, {
+          "value" : "sul-cms-cache-b",
+          "name" : "hostname",
+          "certname" : "sul-cms-cache-b.stanford.edu"
+        }, {
+          "value" : "sulreports-db",
+          "name" : "hostname",
+          "certname" : "sulreports-db.stanford.edu"
+        }, {
+          "value" : "sul-coral-dev",
+          "name" : "hostname",
+          "certname" : "sul-coral-dev.stanford.edu"
+        }, {
+          "value" : "modsulator-app-prod",
+          "name" : "hostname",
+          "certname" : "modsulator-app-prod.stanford.edu"
+        }, {
+          "value" : "sul-wowza-stage",
+          "name" : "hostname",
+          "certname" : "sul-wowza-stage.stanford.edu"
+        }, {
+          "value" : "modsulator-app-stage",
+          "name" : "hostname",
+          "certname" : "modsulator-app-stage.stanford.edu"
+        }, {
+          "value" : "sul-robots2-prod",
+          "name" : "hostname",
+          "certname" : "sul-robots2-prod.stanford.edu"
+        }, {
+          "value" : "sulreports-db-dev",
+          "name" : "hostname",
+          "certname" : "sulreports-db-dev.stanford.edu"
+        }, {
+          "value" : "coursework-dev5",
+          "name" : "hostname",
+          "certname" : "coursework-dev5.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Wed, 30 Mar 2016 03:04:18 GMT
+recorded_with: VCR 3.0.1
