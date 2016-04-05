@@ -6,4 +6,4 @@ gem 'rspec'
 gem 'rake'
 gem 'vcr'
 gem 'webmock'
-gem 'coveralls'
+gem 'coveralls', require: false
