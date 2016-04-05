@@ -1,10 +1,6 @@
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-
+require 'spec_helper'
 require 'puppetdb_reporter.rb'
 require 'vcr'
-require 'coveralls'
-Coveralls.wear!
 
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
