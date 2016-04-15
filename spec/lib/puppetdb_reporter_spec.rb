@@ -65,13 +65,17 @@ describe 'PuppetdbReporter' do
   end
 
   it 'generates an array of facts for each hostname' do
-    skip
-    expect(@puppetdb_reporter.generate_all_content).to be_kind_of(Array)
+    puppetdb_reporter = double('puppetdb_reporter')
+    allow(puppetdb_reporter).to receive_messages(:generate_all_content => [["sulreports-db-dev.stanford.edu", "systeam", nil, nil, "reports", "low"],
+                                                                           ["coursework-dev5.stanford.edu", nil, nil, nil, nil, nil]])
+    expect(puppetdb_reporter.generate_all_content).to be_kind_of(Array)
   end
 
   it 'writes a csv report from generated content' do
-    skip
-    expect(@puppetdb_reporter.write_csv_report).to be_kind_of(Array)
+    puppetdb_reporter = double('puppetdb_reporter')
+    allow(puppetdb_reporter).to receive_messages(:write_csv_report => [["hostname", "department", "technical_team", "user_advocate", "project", "sla_level"],
+                                                                       ["argo-prod-a.stanford.edu", "dlss", "infrastructure", nil, "argo", "low"]])
+    expect(puppetdb_reporter.write_csv_report).to be_kind_of(Array)
   end
 
 end
