@@ -89,4 +89,14 @@ class PuppetdbReporter
     end
   end
 
+  def read_csv(file)
+    CSV.read(file, headers: true)
+  end
+
+  def get_single_record_from_csv(file, hostname)
+    result_array = CSV.read(file, headers: true).select do |row|
+      row['hostname'] == hostname
+    end
+    result_array.first
+  end
 end
