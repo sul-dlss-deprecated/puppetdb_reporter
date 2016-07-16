@@ -1,0 +1,188 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22libdbdev2.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22department%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jul 2016 02:09:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '93'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "dlss",
+          "name" : "department",
+          "certname" : "libdbdev2.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Sat, 16 Jul 2016 02:09:33 GMT
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22libdbdev2.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22technical_team%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jul 2016 02:09:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '97'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "systeam",
+          "name" : "technical_team",
+          "certname" : "libdbdev2.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Sat, 16 Jul 2016 02:09:33 GMT
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22libdbdev2.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22user_advocate%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jul 2016 02:09:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '23'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "[ ]"
+    http_version: 
+  recorded_at: Sat, 16 Jul 2016 02:09:33 GMT
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22libdbdev2.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22project%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jul 2016 02:09:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '96'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "databases",
+          "name" : "project",
+          "certname" : "libdbdev2.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Sat, 16 Jul 2016 02:09:33 GMT
+- request:
+    method: get
+    uri: http://sulpuppet-db.stanford.edu:8080/v3/facts?query=%5B%22and%22,%5B%22=%22,%22certname%22,%22libdbdev2.stanford.edu%22%5D,%5B%22=%22,%22name%22,%22sla_level%22%5D%5D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jul 2016 02:09:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '92'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "value" : "low",
+          "name" : "sla_level",
+          "certname" : "libdbdev2.stanford.edu"
+        } ]
+    http_version: 
+  recorded_at: Sat, 16 Jul 2016 02:09:34 GMT
+recorded_with: VCR 3.0.1

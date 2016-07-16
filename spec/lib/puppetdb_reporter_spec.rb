@@ -85,4 +85,26 @@ describe 'PuppetdbReporter' do
   it 'returns a CSV::Row based on hostname' do
     expect(@puppetdb_reporter.get_single_record_from_csv('fixtures/files/puppetdb.csv', 'libdbdev2.stanford.edu')).to be_kind_of CSV::Row
   end
+
+  it 'returns headers representing the fact names' do
+    expect(@puppetdb_reporter.headers).to eql(['hostname', 'department', 'technical_team', 'user_advocate', 'project', 'sla_level'])
+  end
+
+  it 'returns a hash of a CSV::Row based on hostname' do
+    expect(@puppetdb_reporter.get_hash_of_single_record_from_csv('fixtures/files/puppetdb.csv', 'libdbdev2.stanford.edu')).to be_kind_of Hash
+  end
+
+  it 'returns a hash of facts for a hostname from puppetdb', :vcr do
+    expect(@puppetdb_reporter.generate_hash_of_facts_from_puppetdb('bv-stage.stanford.edu')).to eq({ 'hostname' => 'bv-stage.stanford.edu', 'department' => 'dlss',
+                                                                                                      'technical_team' => 'webteam', 'user_advocate' => nil,
+                                                                                                      'project' => 'bv', 'sla_level' => 'low' })
+  end
+
+  it 'can tell if csv and puppetdb records for a hostname are the same', :vcr do
+    expect(@puppetdb_reporter.same_csv_and_puppetdb_record?('fixtures/files/puppetdb.csv', 'kurma-earthworks1-prod.stanford.edu')).to be_truthy
+  end
+
+  it 'can tell if csv and puppetdb records for a hostname are different', :vcr do
+    expect(@puppetdb_reporter.same_csv_and_puppetdb_record?('fixtures/files/puppetdb.csv', 'libdbdev2.stanford.edu')).to be_falsey
+  end
 end

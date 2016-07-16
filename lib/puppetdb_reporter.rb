@@ -82,8 +82,7 @@ class PuppetdbReporter
 
   def write_csv_report
     content = generate_all_content
-    headers = ['hostname', 'department', 'technical_team', 'user_advocate', 'project', 'sla_level']
-    content.unshift(headers)
+    content.unshift(self.headers)
     CSV.open("puppetdb.csv", "wb") do |csv|
       content.collect { |x| csv << x }
     end
@@ -98,5 +97,21 @@ class PuppetdbReporter
       row['hostname'] == hostname
     end
     result_array.first
+  end
+
+  def headers
+    [ 'hostname', 'department', 'technical_team', 'user_advocate', 'project', 'sla_level' ]
+  end
+
+  def get_hash_of_single_record_from_csv(file, hostname)
+    get_single_record_from_csv(file, hostname).to_hash
+  end
+
+  def generate_hash_of_facts_from_puppetdb(hostname)
+    Hash[headers.zip generate_line_of_content(hostname)]
+  end
+
+  def same_csv_and_puppetdb_record?(csv, hostname)
+    get_hash_of_single_record_from_csv(csv, hostname) == generate_hash_of_facts_from_puppetdb(hostname)
   end
 end
