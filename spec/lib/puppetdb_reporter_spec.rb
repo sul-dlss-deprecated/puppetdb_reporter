@@ -79,10 +79,10 @@ describe 'PuppetdbReporter' do
   end
 
   it 'reads in a csv report' do
-    expect(@puppetdb_reporter.read_csv('spec/fixtures/files/puppetdb.csv')).to be_kind_of CSV::Table
+    expect(@puppetdb_reporter.read_csv('fixtures/files/puppetdb.csv')).to be_kind_of CSV::Table
   end
 
   it 'returns a CSV::Row based on hostname' do
-    expect(@puppetdb_reporter.get_single_record_from_csv('spec/fixtures/files/puppetdb.csv', 'libdbdev2.stanford.edu')).to be_kind_of CSV::Row
+    expect(@puppetdb_reporter.get_single_record_from_csv('fixtures/files/puppetdb.csv', 'libdbdev2.stanford.edu')).to be_kind_of CSV::Row
   end
 end
