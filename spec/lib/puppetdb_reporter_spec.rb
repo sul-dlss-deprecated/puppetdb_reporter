@@ -1,12 +1,12 @@
 require 'spec_helper'
 require 'puppetdb_reporter.rb'
-require 'vcr'
+# require 'vcr'
 
-VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = "fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.configure_rspec_metadata!
+# end
 
 describe 'PuppetdbReporter' do
 
@@ -26,43 +26,43 @@ describe 'PuppetdbReporter' do
     expect(@puppetdb_reporter.client).to be_kind_of(PuppetDB::Client)
   end
 
-  it 'can return the number of hostnames', :vcr do
-    expect(@puppetdb_reporter.number_of_hostnames).to eql(466)
-  end
-
-  it 'can return the number of nodes with a technical_team', :vcr do
-    expect(@puppetdb_reporter.technical_team_count).to eql(116)
-  end
-
-  it 'returns a list of hostnames', :vcr do
-    expect(@puppetdb_reporter.hostnames).to be_kind_of(Array)
-  end
-
-  it 'can return a department for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_department('sul-frda-prod.stanford.edu')).to eql('dlss')
-  end
-
-  it 'can return a technical_team for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_technical_team('sul-frda-prod.stanford.edu')).to eql('webteam')
-  end
-
-  it 'can return a user_advocate for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_user_advocate('sul-frda-prod.stanford.edu')).to eql('caster')
-  end
-
-  it 'can return a project for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_project('sul-frda-prod.stanford.edu')).to eql('frda')
-  end
-
-  it 'can return an sla_level for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_sla_level('sul-frda-prod.stanford.edu')).to eql('low')
-  end
-
-  it 'returns an array of facts for a hostname', :vcr do
-    expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
-                                                                                                'dlss','webteam','caster',
-                                                                                                'frda','low'])
-  end
+  # it 'can return the number of hostnames', :vcr do
+  #   expect(@puppetdb_reporter.number_of_hostnames).to eql(466)
+  # end
+  #
+  # it 'can return the number of nodes with a technical_team', :vcr do
+  #   expect(@puppetdb_reporter.technical_team_count).to eql(116)
+  # end
+  #
+  # it 'returns a list of hostnames', :vcr do
+  #   expect(@puppetdb_reporter.hostnames).to be_kind_of(Array)
+  # end
+  #
+  # it 'can return a department for a given hostname', :vcr do
+  #   expect(@puppetdb_reporter.get_department('sul-frda-prod.stanford.edu')).to eql('dlss')
+  # end
+  #
+  # it 'can return a technical_team for a given hostname', :vcr do
+  #   expect(@puppetdb_reporter.get_technical_team('sul-frda-prod.stanford.edu')).to eql('webteam')
+  # end
+  #
+  # it 'can return a user_advocate for a given hostname', :vcr do
+  #   expect(@puppetdb_reporter.get_user_advocate('sul-frda-prod.stanford.edu')).to eql('caster')
+  # end
+  #
+  # it 'can return a project for a given hostname', :vcr do
+  #   expect(@puppetdb_reporter.get_project('sul-frda-prod.stanford.edu')).to eql('frda')
+  # end
+  #
+  # it 'can return an sla_level for a given hostname', :vcr do
+  #   expect(@puppetdb_reporter.get_sla_level('sul-frda-prod.stanford.edu')).to eql('low')
+  # end
+  #
+  # it 'returns an array of facts for a hostname', :vcr do
+  #   expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
+  #                                                                                               'dlss','webteam','caster',
+  #                                                                                               'frda','low'])
+  # end
 
   it 'generates an array of facts for each hostname' do
     puppetdb_reporter = double('puppetdb_reporter')
