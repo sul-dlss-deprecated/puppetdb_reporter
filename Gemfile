@@ -7,6 +7,7 @@ gem 'rake'
 gem 'vcr'
 gem 'webmock'
 gem 'coveralls', require: false
+gem 'activesupport'
 
 group :deployment do
   gem 'capistrano', "~> 3"

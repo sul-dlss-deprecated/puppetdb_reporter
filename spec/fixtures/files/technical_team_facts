@@ -1,0 +1,12 @@
+[
+  {
+    "certname": "some-server-stage.stanford.edu",
+    "name": "technical_team",
+    "value": "foo"
+  },
+  {
+    "certname": "some-server-prod.stanford.edu",
+    "name": "technical_team",
+    "value": "bar"
+  }
+]

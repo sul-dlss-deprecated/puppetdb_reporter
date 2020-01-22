@@ -1,0 +1,12 @@
+[
+  {
+    "value": "dlss",
+    "name": "department",
+    "certname": "sul-frda-prod.stanford.edu"
+  },
+  {
+    "value": "lockss",
+    "name": "department",
+    "certname": "sul-frda-stage.stanford.edu"
+  }
+]
