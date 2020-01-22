@@ -20,8 +20,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return the number of hostnames' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/hostname_facts'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/hostname_facts')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -29,8 +28,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return the number of nodes with a technical_team' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -38,8 +36,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'returns a list of hostnames' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/hostname_facts'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/hostname_facts')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -47,8 +44,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return a department for a given hostname' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -56,8 +52,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return a technical_team for a given hostname' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_for_hostname'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_for_hostname')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -65,8 +60,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return a user_advocate for a given hostname' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -74,8 +68,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return a project for a given hostname' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -83,8 +76,7 @@ describe 'PuppetdbReporter' do
   end
 
   it 'can return an sla_level for a given hostname' do
-    file = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname'))
-    response = file.read
+    response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname')).read
     stub_request(:any, /sulpuppet-db/).to_return(status: 200,
                                                  body: response,
                                                  headers: { 'Content-Type' => 'application/json' })
@@ -92,16 +84,11 @@ describe 'PuppetdbReporter' do
   end
 
   it 'returns an array of facts for a hostname' do
-    departments = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts'))
-    departments_response = departments.read
-    technical_teams = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts'))
-    technical_teams_response = technical_teams.read
-    user_advocates = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname'))
-    user_advocates_response = user_advocates.read
-    projects = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname'))
-    projects_response = projects.read
-    sla_levels = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname'))
-    sla_levels_response = sla_levels.read
+    departments_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts')).read
+    technical_teams_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts')).read
+    user_advocates_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname')).read
+    projects_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname')).read
+    sla_levels_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname')).read
     stub_request(:any, /sulpuppet-db/).to_return({ status: 200,
                                                    body: departments_response,
                                                    headers: { 'Content-Type' => 'application/json' } },
