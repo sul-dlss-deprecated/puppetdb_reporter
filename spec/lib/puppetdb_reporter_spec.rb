@@ -1,17 +1,17 @@
 require 'spec_helper'
 require 'puppetdb_reporter.rb'
-require 'vcr'
-
-VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-end
 
 describe 'PuppetdbReporter' do
 
   before(:all) do
     @puppetdb_reporter = PuppetdbReporter.new('http://sulpuppet-db.stanford.edu:8080')
+    @hostnames_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/hostname_facts')).read
+    @technical_teams_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts')).read
+    @departments_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts')).read
+    @technical_team_for_hostname_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_for_hostname')).read
+    @user_advocate_for_hostname_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname')).read
+    @project_for_hostname_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname')).read
+    @sla_for_hostname_response = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname')).read
   end
 
   it 'can instantiate with an endpoint url' do
@@ -26,42 +26,81 @@ describe 'PuppetdbReporter' do
     expect(@puppetdb_reporter.client).to be_kind_of(PuppetDB::Client)
   end
 
-  it 'can return the number of hostnames', :vcr do
-    expect(@puppetdb_reporter.number_of_hostnames).to eql(466)
+  it 'can return the number of hostnames' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @hostnames_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.number_of_hostnames).to eql(2)
   end
 
-  it 'can return the number of nodes with a technical_team', :vcr do
-    expect(@puppetdb_reporter.technical_team_count).to eql(116)
+  it 'can return the number of nodes with a technical_team' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @technical_teams_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.technical_team_count).to eql(2)
   end
 
-  it 'returns a list of hostnames', :vcr do
+  it 'returns a list of hostnames' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @hostnames_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
     expect(@puppetdb_reporter.hostnames).to be_kind_of(Array)
   end
 
-  it 'can return a department for a given hostname', :vcr do
+  it 'can return a department for a given hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @departments_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
     expect(@puppetdb_reporter.get_department('sul-frda-prod.stanford.edu')).to eql('dlss')
   end
 
-  it 'can return a technical_team for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_technical_team('sul-frda-prod.stanford.edu')).to eql('webteam')
+  it 'can return a technical_team for a given hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @technical_team_for_hostname_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.get_technical_team('some-server-prod.stanford.edu')).to eql('bar')
   end
 
-  it 'can return a user_advocate for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_user_advocate('sul-frda-prod.stanford.edu')).to eql('caster')
+  it 'can return a user_advocate for a given hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @user_advocate_for_hostname_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.get_user_advocate('some-server-prod.stanford.edu')).to eql('foo')
   end
 
-  it 'can return a project for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_project('sul-frda-prod.stanford.edu')).to eql('frda')
+  it 'can return a project for a given hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @project_for_hostname_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.get_project('some-server-prod.stanford.edu')).to eql('baz')
   end
 
-  it 'can return an sla_level for a given hostname', :vcr do
-    expect(@puppetdb_reporter.get_sla_level('sul-frda-prod.stanford.edu')).to eql('low')
+  it 'can return an sla_level for a given hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return(status: 200,
+                                                 body: @sla_for_hostname_response,
+                                                 headers: { 'Content-Type' => 'application/json' })
+    expect(@puppetdb_reporter.get_sla_level('some-server-prod.stanford.edu')).to eql('low')
   end
 
-  it 'returns an array of facts for a hostname', :vcr do
+  it 'returns an array of facts for a hostname' do
+    stub_request(:any, /sulpuppet-db/).to_return({ status: 200,
+                                                   body: @departments_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: @technical_teams_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: @user_advocate_for_hostname_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: @project_for_hostname_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: @sla_for_hostname_response,
+                                                   headers: { 'Content-Type' => 'application/json' } })
     expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
-                                                                                                'dlss','webteam','caster',
-                                                                                                'frda','low'])
+                                                                                                'dlss','foo','foo',
+                                                                                                'baz','low'])
   end
 
   it 'generates an array of facts for each hostname' do

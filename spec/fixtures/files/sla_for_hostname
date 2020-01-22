@@ -1,0 +1,7 @@
+[
+  {
+    "value": "low",
+    "name": "sla_level",
+    "certname": "some-server-prod.stanford.edu"
+  }
+]

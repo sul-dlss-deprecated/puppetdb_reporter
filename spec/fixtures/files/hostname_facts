@@ -1,0 +1,12 @@
+[
+  {
+    "value": "some-server-stage.stanford.edu",
+    "name": "fqdn",
+    "certname": "some-server-stage.stanford.edu"
+  },
+  {
+    "value": "some-server-prod.stanford.edu",
+    "name": "fqdn",
+    "certname": "some-server-prod.stanford.edu"
+  }
+]
