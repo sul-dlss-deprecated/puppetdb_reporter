@@ -1,12 +1,5 @@
 require 'spec_helper'
 require 'puppetdb_reporter.rb'
-# require 'vcr'
-
-# VCR.configure do |config|
-#   config.cassette_library_dir = "fixtures/vcr_cassettes"
-#   config.hook_into :webmock
-#   config.configure_rspec_metadata!
-# end
 
 describe 'PuppetdbReporter' do
 
@@ -97,12 +90,37 @@ describe 'PuppetdbReporter' do
                                                  headers: { 'Content-Type' => 'application/json' })
     expect(@puppetdb_reporter.get_sla_level('some-server-prod.stanford.edu')).to eql('low')
   end
-  #
-  # it 'returns an array of facts for a hostname', :vcr do
-  #   expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
-  #                                                                                               'dlss','webteam','caster',
-  #                                                                                               'frda','low'])
-  # end
+
+  it 'returns an array of facts for a hostname' do
+    departments = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/department_facts'))
+    departments_response = departments.read
+    technical_teams = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/technical_team_facts'))
+    technical_teams_response = technical_teams.read
+    user_advocates = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/user_advocate_for_hostname'))
+    user_advocates_response = user_advocates.read
+    projects = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/project_for_hostname'))
+    projects_response = projects.read
+    sla_levels = File.open(File.join(File.dirname(__FILE__), '../fixtures/files/sla_for_hostname'))
+    sla_levels_response = sla_levels.read
+    stub_request(:any, /sulpuppet-db/).to_return({ status: 200,
+                                                   body: departments_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: technical_teams_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: user_advocates_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: projects_response,
+                                                   headers: { 'Content-Type' => 'application/json' } },
+                                                 { status: 200,
+                                                   body: sla_levels_response,
+                                                   headers: { 'Content-Type' => 'application/json' } })
+    expect(@puppetdb_reporter.generate_line_of_content('sul-frda-prod.stanford.edu')).to eql(['sul-frda-prod.stanford.edu',
+                                                                                                'dlss','foo','foo',
+                                                                                                'baz','low'])
+  end
 
   it 'generates an array of facts for each hostname' do
     puppetdb_reporter = double('puppetdb_reporter')
